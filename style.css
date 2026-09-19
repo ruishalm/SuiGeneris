@@ -403,6 +403,7 @@ a { color: inherit; text-decoration: none; }
 .card-red:hover  { border-color: rgba(224,49,49,0.4); box-shadow: 0 8px 32px rgba(201,42,42,0.12); }
 .card-amber:hover{ border-color: rgba(245,159,0,0.4); box-shadow: 0 8px 32px rgba(245,159,0,0.12); }
 .card-green:hover{ border-color: rgba(55,178,77,0.4); box-shadow: 0 8px 32px rgba(55,178,77,0.10); }
+.card-blue:hover { border-color: rgba(56,189,248,0.4); box-shadow: 0 8px 32px rgba(56,189,248,0.12); }
 .card-icon { font-size: 2rem; margin-bottom: 14px; }
 .card h3 {
   font-family: var(--font-head);
