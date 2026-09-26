@@ -233,62 +233,82 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.04em;
 }
 
-/* Diagrama hero */
-.hero-diagram {
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  user-select: none;
+/* ── DIAGRAMA BIOLÓGICO HORIZONTAL ────────────────────── */
+.section-diagram {
+  position: relative;
+  z-index: 1;
+  padding: 32px 24px;
+  background: rgba(18, 22, 25, 0.5);
+  border-top: 1px solid var(--border-dim);
+  border-bottom: 1px solid var(--border-dim);
+  backdrop-filter: blur(12px);
 }
+
+.diagram-strip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
 .diag-node {
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-  padding: 16px 24px;
-  border-radius: 14px 6px 14px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 20px;
+  border-radius: 12px 4px 12px 4px;
   border: 1px solid var(--border-dim);
-  background: rgba(18,22,25,0.7);
-  backdrop-filter: blur(10px);
+  background: var(--bg-card);
   font-family: var(--font-head);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
   text-align: center;
-  min-width: 130px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  flex: 1;
+  max-width: 210px;
+  line-height: 1.25;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
   animation: node-pulse 4s ease-in-out infinite;
 }
-.diag-icon { font-size: 1.6rem; }
-.diag-core {
-  border-color: rgba(224,49,49,0.4);
-  box-shadow: 0 0 20px rgba(201,42,42,0.15);
-  animation-delay: 0s;
+
+.diag-node:hover {
+  transform: translateY(-3px);
+  border-color: rgba(224, 49, 49, 0.45);
+  box-shadow: 0 8px 28px rgba(201, 42, 42, 0.18);
 }
-.diag-plasmid {
-  border-color: rgba(245,159,0,0.35);
-  box-shadow: 0 0 20px rgba(245,159,0,0.12);
-  animation-delay: -1.3s;
+
+.diag-icon {
+  font-size: 1.5rem;
 }
+
 .diag-crispr {
-  border-color: rgba(55,178,77,0.35);
-  box-shadow: 0 0 20px rgba(55,178,77,0.12);
-  animation-delay: -2.6s;
+  border-color: rgba(55, 178, 77, 0.35);
+  box-shadow: 0 0 20px rgba(55, 178, 77, 0.12);
+  animation-delay: -2s;
 }
+
 .diag-forge {
-  border-color: rgba(224,49,49,0.3);
-  box-shadow: 0 0 20px rgba(201,42,42,0.12);
+  border-color: rgba(224, 49, 49, 0.35);
+  box-shadow: 0 0 20px rgba(201, 42, 42, 0.12);
   animation-delay: -1s;
 }
-@keyframes node-pulse {
-  0%, 100% { box-shadow: 0 0 12px rgba(201,42,42,0.08); }
-  50%       { box-shadow: 0 0 28px rgba(201,42,42,0.25); }
-}
-.diag-lines { display: flex; gap: 60px; }
-.diag-line { width: 1px; height: 24px; background: var(--border-dim); }
-.diag-row { display: flex; gap: 16px; }
+
 .diag-arrow {
   font-size: 1.4rem;
-  color: var(--red);
-  animation: bounce-down 1.5s ease-in-out infinite;
+  color: var(--red-bright);
+  flex-shrink: 0;
+  user-select: none;
+  opacity: 0.85;
 }
-@keyframes bounce-down {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(5px); }
+
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(201, 42, 42, 0.06); }
+  50%       { box-shadow: 0 0 24px rgba(201, 42, 42, 0.20); }
 }
 
 /* ── FAIXA MANIFESTO ─────────────────────────────────────── */
@@ -568,6 +588,9 @@ body::after {
   .hero { grid-template-columns: 1fr; padding: 60px 20px; gap: 50px; }
   .hero-diagram { display: none; }
   .site-nav a:not(.nav-cta) { display: none; }
+  .diagram-strip { flex-direction: column; gap: 10px; }
+  .diag-arrow { transform: rotate(90deg); }
+  .diag-node { width: 100%; max-width: 100%; }
   .phases { flex-direction: column; }
   .phase-arrow { transform: rotate(90deg); align-self: center; }
   .arch-item { flex-direction: column; gap: 12px; }
