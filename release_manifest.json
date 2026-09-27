@@ -1,0 +1,16 @@
+{
+  "version": "0.3.0",
+  "channel": "gama",
+  "release_notes": "Sui Generis Gama v0.3.0: Arquitetura Biológica CRISPR/Cas, Plasmídeo Mestre Primordial, Síntese de Organelas Neurais, Suíte de Testes com 60 Asserções e Distribuição Git LFS.",
+  "timestamp": "2026-09-27T17:00:00Z",
+  "ui_bundle": {
+    "version": "0.3.0",
+    "url": "https://raw.githubusercontent.com/ruishalm/Sui/main/docs/ui_bundle_v0.3.0.zip",
+    "sha256": ""
+  },
+  "installer": {
+    "filename": "SuiGeneris_Setup_v0.3.0_Gama.exe",
+    "url": "https://github.com/ruishalm/SuiGeneris/raw/main/download/SuiGeneris_Setup_v0.3.0_Gama.exe",
+    "sha256": "86ed941f3c007165c73b0216628c5362ae68bd25334467973aa2afff5da1400b"
+  }
+}
