@@ -5,8 +5,8 @@
   "timestamp": "2026-09-27T17:00:00Z",
   "ui_bundle": {
     "version": "0.3.0",
-    "url": "https://raw.githubusercontent.com/ruishalm/Sui/main/docs/ui_bundle_v0.3.0.zip",
-    "sha256": ""
+    "url": "https://raw.githubusercontent.com/ruishalm/SuiGeneris/main/download/ui_bundle_v0.3.0.zip",
+    "sha256": "be5be2619864dab1141d6205698de6148284946f0b1762825c56f4a81e2483eb"
   },
   "installer": {
     "filename": "SuiGeneris_Setup_v0.3.0_Gama.exe",
